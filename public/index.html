@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>준우의 파일공유 🍜</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ramen-box">
+  <h1>🍜 준우의 파일공유</h1>
+  <p class="subtitle">파일을 끓이는 중입니다…</p>
+
+  <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <input type="text" name="password" placeholder="비밀번호" required>
+    <input type="number" name="expire" placeholder="삭제시간(초)" value="300" required>
+    <button type="submit">라면 끓이기</button>
+  </form>
+
+  <div id="loading" class="loading hidden">
+    🍜 끓이는 중…
+  </div>
+
+  <h2>📦 완성된 라면</h2>
+  <ul id="fileList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
